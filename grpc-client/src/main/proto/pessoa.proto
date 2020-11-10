@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package br.com.dazo.grpc;
+option java_multiple_files = true;
+
+service PessoaController {
+    rpc grava (Pessoa) returns (Pessoa) {}
+}
+
+message Pessoa {
+    int32 id = 1;
+    string nome = 2;
+    string login = 3;
+    string cpf = 4;
+    string email = 5;
+}
